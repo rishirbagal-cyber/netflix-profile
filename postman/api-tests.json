@@ -1,0 +1,147 @@
+{
+  "info": {
+    "_postman_id": "a0a3f8eb-0782-42d9-9d11-61b4fcb39f57",
+    "name": "Netflix Profile API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51647719",
+    "_collection_link": "https://go.postman.co/collection/51647719-a0a3f8eb-0782-42d9-9d11-61b4fcb39f57?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "GET Health",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/health",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "health"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST Upload Profile Picture",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "PATCH Update Profile",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"theme\": \"dark\",\r\n  \"language\": \"English\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/profiles/123?source=web",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "profiles",
+            "123"
+          ],
+          "query": [
+            {
+              "key": "source",
+              "value": "web"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE Profile",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/profiles/123",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "profiles",
+            "123"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
